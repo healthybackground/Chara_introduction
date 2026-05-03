@@ -211,3 +211,70 @@ footer { text-align: center; padding: 40px 20px; background: #5c4b43; color: #fd
     transform: translateY(-5px);
     background-color: #b86e5e; /* 少し濃い色に */
 }
+
+/* =========================================
+   スマホ表示（画面幅600px以下）専用の調整
+========================================= */
+@media (max-width: 600px) {
+    
+    /* セクション全体の横幅や余白を詰める */
+    .section {
+        padding: 70px 10px 40px; 
+    }
+
+    /* 1. タイトルエリアをスマホ画面に収める */
+    .hero {
+        padding: 0 15px;
+    }
+    .game-title {
+        font-size: 2rem; /* タイトルの文字サイズを小さく */
+    }
+    .game-title span.sub-title {
+        font-size: 1.1rem;
+    }
+    .catchcopy {
+        font-size: 0.95rem;
+        padding: 12px 15px;
+        line-height: 1.6;
+    }
+
+    /* 2. キャラクターカードをコンパクトにする */
+    .char-card {
+        padding: 15px; /* カード内の余白を減らす */
+        border-top-width: 6px; /* 上の飾り線も少し細く */
+        margin: 0; /* 横幅いっぱいにならないようリセット */
+    }
+    .char-name {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+    .char-img {
+        max-height: 250px; /* 画像が縦に長くなりすぎるのを防ぐ */
+        object-fit: cover; /* 画像の比率を保ちつつ綺麗に収める */
+        margin-bottom: 10px;
+    }
+    .voice-box {
+        padding: 10px;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+    .status-table th, .status-table td {
+        padding: 8px 6px;
+        font-size: 0.85rem; /* 表の文字を小さくして改行を防ぐ */
+    }
+    .char-desc {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* スペック表もスマホ向けに調整 */
+    .spec-table th {
+        width: 30%;
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+    .spec-table td {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+}
