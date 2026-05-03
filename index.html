@@ -2,25 +2,99 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【ゲームタイトル】公式サイト</title>
     <link rel="stylesheet" href="style.css">
-    <title>キャラ紹介</title>
+    <!-- ゴージャス感を出すためのGoogleフォント -->
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>✨ キャラクター図鑑 ✨</h1>
-        
-        <!-- キャラクターカード -->
-        <div class="card">
-            <img src="画像URL" class="char-img" alt="キャラ">
-            <h2 style="text-align:center;">名前：リリィ</h2>
-            <div class="status">
-                <p><strong>タイプ：</strong>魔法使い</p>
-                <p><strong>好物：</strong>イチゴのショートケーキ</p>
-                <p><strong>セリフ：</strong>「一緒に冒険してくれますか？」</p>
-            </div>
-        </div>
+    <!-- ナビゲーション（上部固定） -->
+    <header class="global-nav">
+        <ul>
+            <li><a href="#top">TOP</a></li>
+            <li><a href="#story">STORY</a></li>
+            <li><a href="#character">CHARACTER</a></li>
+            <li><a href="#spec">SPEC</a></li>
+        </ul>
+    </header>
 
-        <!-- キャラを増やすときはこのcardブロックをコピーして追加 -->
-    </div>
+    <!-- トップ画面（メインビジュアル） -->
+    <section id="top" class="hero">
+        <div class="hero-content">
+            <h1 class="game-title">魔法少女の幻影<br><span>- Magical Illusion -</span></h1>
+            <p class="catchcopy">「この中に、偽物の魔法少女がいる──」</p>
+        </div>
+    </section>
+
+    <!-- ストーリーエリア -->
+    <section id="story" class="section fade-in">
+        <h2 class="section-title">STORY</h2>
+        <div class="story-box">
+            <p>ここは誰もが魔法を使える平和な国。<br>しかしある日、突如として不可解な事件が起きる。</p>
+            <p>集められたのは、それぞれ異なる能力を持つ少女たち。<br>嘘と真実が交差する中で、あなたが選ぶ結末とは……。</p>
+        </div>
+    </section>
+
+    <!-- キャラクターエリア -->
+    <section id="character" class="section fade-in">
+        <h2 class="section-title">CHARACTER</h2>
+        <div class="char-container">
+            
+            <!-- キャラ1 -->
+            <div class="char-card">
+                <!-- キャラ画像（縦長推奨） -->
+                <img src="https://placehold.jp/400x500.png?text=エマ" alt="エマ" class="char-img">
+                <div class="char-info">
+                    <h3 class="char-name">エマ <span>CV: 〇〇〇〇</span></h3>
+                    <div class="voice-box">「私、絶対に犯人を見つけ出してみせる！」</div>
+                    <table class="status-table">
+                        <tr><th>年齢</th><td>16歳</td></tr>
+                        <tr><th>魔法</th><td>炎を操る</td></tr>
+                        <tr><th>性格</th><td>正義感が強く、直情型。</td></tr>
+                    </table>
+                    <p class="char-desc">主人公。ある日突然、魔女裁判に巻き込まれることになった。考えるより先に身体が動くタイプ。</p>
+                </div>
+            </div>
+
+            <!-- キャラ2 -->
+            <div class="char-card">
+                <img src="https://placehold.jp/400x500.png?text=リリィ" alt="リリィ" class="char-img">
+                <div class="char-info">
+                    <h3 class="char-name">リリィ <span>CV: △△△△</span></h3>
+                    <div class="voice-box">「ふふっ、本当にそう思っているの？」</div>
+                    <table class="status-table">
+                        <tr><th>年齢</th><td>17歳</td></tr>
+                        <tr><th>魔法</th><td>氷を操る</td></tr>
+                        <tr><th>性格</th><td>冷静沈着だが、どこか影がある。</td></tr>
+                    </table>
+                    <p class="char-desc">エマの幼馴染。常に本を読んでおり、豊富な知識で裁判をサポートするが、時折冷たい視線を送る。</p>
+                </div>
+            </div>
+            
+            <!-- キャラを増やす場合は、この上に<div class="char-card">〜</div>をコピーして追加 -->
+        </div>
+    </section>
+
+    <!-- スペック（製品情報）エリア -->
+    <section id="spec" class="section fade-in">
+        <h2 class="section-title">SPEC</h2>
+        <table class="spec-table">
+            <tr><th>タイトル</th><td>魔法少女の幻影</td></tr>
+            <tr><th>ジャンル</th><td>魔法議論ミステリノベル</td></tr>
+            <tr><th>対応機種</th><td>PC (Windows / Mac) / ブラウザ</td></tr>
+            <tr><th>価格</th><td>無料</td></tr>
+            <tr><th>企画・制作</th><td>あなたのサークル名</td></tr>
+        </table>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <p><a href="#">ガイドライン</a> | <a href="#">お問い合わせ</a></p>
+        <p>&copy; 2024 あなたのサークル名 All Rights Reserved.</p>
+    </footer>
+
+    <!-- 動きをつけるJSを読み込む -->
+    <script src="main.js"></script>
 </body>
 </html>
