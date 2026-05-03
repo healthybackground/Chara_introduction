@@ -115,3 +115,31 @@ footer { text-align: center; padding: 40px 20px; background: #5c4b43; color: #fd
 /* アニメーション */
 .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* --- トップ画面の時間差フェードイン演出 --- */
+.hero-fade {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInTop 1.2s ease forwards;
+}
+
+/* 登場するタイミング（秒数）をずらす */
+.delay-1 { animation-delay: 0.5s; } /* タイトル */
+.delay-2 { animation-delay: 1.5s; } /* サブタイトル */
+.delay-3 { animation-delay: 3.0s; } /* キャッチコピー */
+
+@keyframes fadeInTop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* サブタイトル用の調整 */
+.game-title span.sub-title {
+    font-size: 1.5rem;
+    display: block;
+    margin-top: 10px;
+    color: #8c786d;
+}
