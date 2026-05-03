@@ -5,6 +5,15 @@
     --text-color: #5c4b43; /* 墨色・焦げ茶系で目に優しく */
 }
 
+/* --- 画面はみ出し防止（超重要） --- */
+*, *::before, *::after {
+    box-sizing: border-box; /* 枠線や余白を幅の計算に含める */
+}
+img {
+    max-width: 100%; /* 画像が画面幅を超えないようにする */
+    height: auto;
+}
+
 /* --- スムーススクロールとジャンプ位置の調整 --- */
 html {
     scroll-behavior: smooth; /* リンクの飛び方を滑らかにする */
