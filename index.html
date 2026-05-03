@@ -9,13 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;800&family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="global-nav">
-        <ul>
-            <li><a href="#top">TOP</a></li>
-            <li><a href="#story">STORY</a></li>
-            <li><a href="#character">CHARACTER</a></li>
-            <li><a href="#spec">SPEC</a></li>
-        </ul>
+<header class="global-nav">
+        <div class="nav-inner">
+            <ul>
+                <li><a href="#top">TOP</a></li>
+                <li><a href="#story">STORY</a></li>
+                <li><a href="#character">CHARACTER</a></li>
+                <li><a href="#spec">SPEC</a></li>
+            </ul>
+            <!-- 公式Xアカウントへのリンク -->
+            <a href="https://x.com/recipe768" target="_blank" class="nav-x-link" title="公式X">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+        </div>
     </header>
 
     <section id="top" class="hero">
@@ -138,5 +144,13 @@
     </footer>
 
     <script src="main.js"></script>
+    
+    <!-- 画面右下に追従する共有ボタン -->
+    <button id="shareButton" class="floating-share" title="サイトを共有する">
+        <i class="fa-solid fa-share-nodes"></i>
+    </button>
+
+    <script src="main.js"></script>
+</body>
 </body>
 </html>
