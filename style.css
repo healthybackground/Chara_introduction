@@ -5,6 +5,16 @@
     --text-color: #5c4b43; /* 墨色・焦げ茶系で目に優しく */
 }
 
+/* --- スムーススクロールとジャンプ位置の調整 --- */
+html {
+    scroll-behavior: smooth; /* リンクの飛び方を滑らかにする */
+}
+
+/* 飛んだ先が上の固定メニューに隠れないようにする調整 */
+.section, .hero {
+    scroll-margin-top: 70px; /* ヘッダーの高さ分だけズラして止まるようにする */
+}
+
 body {
     margin: 0; padding: 0;
     font-family: 'M PLUS Rounded 1c', sans-serif;
