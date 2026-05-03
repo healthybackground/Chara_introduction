@@ -143,3 +143,52 @@ footer { text-align: center; padding: 40px 20px; background: #5c4b43; color: #fd
     margin-top: 10px;
     color: #8c786d;
 }
+
+/* --- ヘッダー内のXアイコン調整 --- */
+.global-nav .nav-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.nav-x-link {
+    position: absolute;
+    right: 20px;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+.nav-x-link:hover { color: var(--main-color); }
+
+/* スマホ表示の時はXアイコンを少し内側に寄せる */
+@media (max-width: 600px) {
+    .global-nav li { margin: 0 10px; font-size: 13px; }
+    .nav-x-link { right: 10px; }
+}
+
+/* --- 右下追従の共有（シェア）ボタン --- */
+.floating-share {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 12px rgba(92, 75, 67, 0.3);
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.floating-share:hover {
+    transform: translateY(-5px);
+    background-color: #b86e5e; /* 少し濃い色に */
+}
