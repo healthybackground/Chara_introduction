@@ -1,7 +1,7 @@
 /* --- ベース設定 --- */
 :root {
     --main-color: #e91e63; /* テーマカラー（濃いピンク） */
-    --bg-color: #fff0f5;   /* 背景のベース色 */
+    --bg-color: #fff2fd;   /* 背景のベース色 */
     --dot-color: #ffc0cb;  /* ドットの色 */
     --text-color: #444;
 }
