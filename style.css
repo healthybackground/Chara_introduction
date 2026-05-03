@@ -97,10 +97,10 @@ a { text-decoration: none; color: inherit; }
     /* HTMLで設定したキャラごとの色（--char-color）を境界線に適用 */
     border-top: 8px solid var(--char-color);
 }
-@media (min-width: 600px) {
+@media (min-width: 801px) {
     .char-card { flex-direction: row; gap: 30px; }
-    .char-img { width: 35%; object-fit: cover; border-radius: 20px; margin-bottom: 0; }
-    .char-info { width: 65%; }
+    .char-img { width: 35%; max-width: 280px; object-fit: cover; border-radius: 20px; margin-bottom: 0; }
+    .char-info { flex: 1; min-width: 0; }
 }
 .char-img { width: 100%; border-radius: 20px; margin-bottom: 15px; }
 .char-name { 
@@ -108,7 +108,14 @@ a { text-decoration: none; color: inherit; }
     border-bottom: 2px dashed var(--char-color); padding-bottom: 5px; 
     color: var(--text-color);
 }
-.char-name span { font-size: 1rem; color: #a3958c; margin-left: 10px; font-family: 'M PLUS Rounded 1c', sans-serif;}
+.char-name span { 
+    font-size: 1rem; 
+    color: #a3958c; 
+    margin-left: 10px; 
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    display: inline-block;
+    white-space: nowrap; 
+}
 .voice-box {
     font-style: italic; background: #faf5f3;
     padding: 15px; border-radius: 15px;
