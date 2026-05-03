@@ -215,7 +215,7 @@ footer { text-align: center; padding: 40px 20px; background: #5c4b43; color: #fd
 /* =========================================
    スマホ表示（画面幅600px以下）専用の調整
 ========================================= */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     
     /* セクション全体の横幅や余白を詰める */
     .section {
