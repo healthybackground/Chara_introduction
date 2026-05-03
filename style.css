@@ -1,116 +1,117 @@
-/* --- ベース設定 --- */
 :root {
-    --main-color: #e91e63; /* テーマカラー（濃いピンク） */
-    --bg-color: #fff2fd;   /* 背景のベース色 */
-    --dot-color: #ffc0cb;  /* ドットの色 */
-    --text-color: #444;
+    --main-color: #d28574; /* 和風の落ち着いた朱色（珊瑚色系） */
+    --bg-color: #fdfaf6;   /* 温かみのある和紙のような白 */
+    --dot-color: #f5e4e1;  /* ドットの薄い桜色 */
+    --text-color: #5c4b43; /* 墨色・焦げ茶系で目に優しく */
 }
 
 body {
     margin: 0; padding: 0;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     color: var(--text-color);
-    /* 可愛いドット背景の描画 */
     background-color: var(--bg-color);
-    background-image: radial-gradient(var(--dot-color) 15%, transparent 15%);
-    background-size: 24px 24px;
+    /* ほんのり和風なドットパターン */
+    background-image: radial-gradient(var(--dot-color) 18%, transparent 18%);
+    background-size: 28px 28px;
+    line-height: 1.8;
 }
 
-h1, h2, h3 { font-family: 'Shippori Mincho', serif; } /* 見出しはノベルっぽく明朝体 */
+h1, h2, h3 { font-family: 'Shippori Mincho', serif; font-weight: 800; }
 a { text-decoration: none; color: inherit; }
 
-/* --- ナビゲーション --- */
+/* ナビゲーション */
 .global-nav {
     position: fixed; top: 0; width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: rgba(253, 250, 246, 0.95);
+    box-shadow: 0 2px 10px rgba(92, 75, 67, 0.1);
     z-index: 1000;
 }
 .global-nav ul {
-    display: flex; justify-content: center;
-    list-style: none; padding: 12px 0; margin: 0;
+    display: flex; justify-content: center; list-style: none; padding: 15px 0; margin: 0;
 }
-.global-nav li { margin: 0 15px; font-weight: bold; font-size: 14px; }
+.global-nav li { margin: 0 15px; font-weight: bold; font-size: 14px; letter-spacing: 1px; }
 .global-nav a:hover { color: var(--main-color); }
 
-/* --- トップ（ヒーローエリア） --- */
+/* トップ（ヒーロー） */
 .hero {
-    height: 100vh;
-    display: flex; align-items: center; justify-content: center; text-align: center;
-    /* 背景画像を合成。URL部分を自作の横長メインビジュアルに変えると一気に本格的になります */
-    background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.9)), url('https://placehold.jp/1200x800.png') no-repeat center/cover;
+    height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;
+    /* 背景画像を後から設定できるようにプレースホルダー */
+    background: linear-gradient(rgba(253, 250, 246, 0.6), rgba(253, 250, 246, 0.9)), url('https://placehold.jp/1200x800.png') no-repeat center/cover;
 }
-.game-title { font-size: 2.5rem; color: var(--main-color); text-shadow: 2px 2px 0px #fff; margin-bottom: 10px; }
-.game-title span { font-size: 1.2rem; display: block; margin-top: 10px; color: #666; }
+.game-title { 
+    font-size: 3rem; color: var(--main-color); 
+    text-shadow: 2px 2px 0px #fff; margin-bottom: 20px; 
+}
+.game-title span { font-size: 1.5rem; display: block; margin-top: 10px; color: #8c786d; }
 .catchcopy {
-    font-size: 1.1rem; font-weight: bold;
-    background: rgba(255,255,255,0.8);
-    padding: 10px 20px; border-radius: 20px;
-    display: inline-block;
+    font-size: 1.2rem; font-family: 'Shippori Mincho', serif; font-weight: 500;
+    background: rgba(255,255,255,0.85); padding: 15px 25px; border-radius: 30px; /* 丸みを強調 */
+    display: inline-block; border: 2px dashed var(--main-color);
 }
 
-/* --- セクション共通 --- */
-.section { padding: 80px 20px 40px; max-width: 800px; margin: 0 auto; }
+/* セクション共通 */
+.section { padding: 90px 20px 50px; max-width: 800px; margin: 0 auto; }
 .section-title {
-    text-align: center; font-size: 2rem; color: var(--main-color);
-    margin-bottom: 40px; letter-spacing: 2px;
+    text-align: center; font-size: 2.2rem; color: var(--main-color);
+    margin-bottom: 40px; letter-spacing: 3px;
 }
-.section-title::after { /* タイトル下のオシャレな線 */
-    content: ''; display: block; width: 50px; height: 3px;
-    background: var(--main-color); margin: 10px auto 0;
+.section-title::after {
+    content: '✿'; display: block; font-size: 1.2rem; color: var(--main-color);
+    margin: 5px auto 0; text-align: center;
 }
 
-/* --- ストーリー --- */
+/* ストーリー */
 .story-box {
-    background: rgba(255,255,255,0.9);
-    padding: 30px; border-radius: 15px;
-    border: 2px dashed var(--main-color);
-    line-height: 2; text-align: center; font-family: 'Shippori Mincho', serif;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px; border-radius: 25px;
+    border: 3px solid var(--dot-color);
+    text-align: center; font-family: 'Shippori Mincho', serif; font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 }
 
-/* --- キャラクター --- */
-.char-container { display: flex; flex-direction: column; gap: 40px; }
+/* キャラクター */
+.char-container { display: flex; flex-direction: column; gap: 50px; }
 .char-card {
-    background: rgba(255,255,255,0.95);
-    border-radius: 20px; padding: 20px;
+    background: #fff; border-radius: 30px; padding: 25px; /* 全体的に丸く */
     display: flex; flex-direction: column;
-    box-shadow: 0 8px 20px rgba(233, 30, 99, 0.15);
-    border: 2px solid #fff;
+    box-shadow: 0 10px 25px rgba(92, 75, 67, 0.08);
+    /* HTMLで設定したキャラごとの色（--char-color）を境界線に適用 */
+    border-top: 8px solid var(--char-color);
 }
-@media (min-width: 600px) { /* PC・タブレットでは横並びになる */
-    .char-card { flex-direction: row; gap: 25px; }
-    .char-img { width: 40%; object-fit: cover; border-radius: 10px; margin-bottom: 0; }
-    .char-info { width: 60%; }
+@media (min-width: 600px) {
+    .char-card { flex-direction: row; gap: 30px; }
+    .char-img { width: 35%; object-fit: cover; border-radius: 20px; margin-bottom: 0; }
+    .char-info { width: 65%; }
 }
-.char-img { width: 100%; border-radius: 15px; margin-bottom: 15px; }
-.char-name { font-size: 1.8rem; margin: 0 0 10px; border-bottom: 2px solid var(--dot-color); padding-bottom: 5px; }
-.char-name span { font-size: 0.9rem; color: #888; margin-left: 10px; font-family: sans-serif; }
+.char-img { width: 100%; border-radius: 20px; margin-bottom: 15px; }
+.char-name { 
+    font-size: 2rem; margin: 0 0 15px; 
+    border-bottom: 2px dashed var(--char-color); padding-bottom: 5px; 
+    color: var(--text-color);
+}
+.char-name span { font-size: 1rem; color: #a3958c; margin-left: 10px; font-family: 'M PLUS Rounded 1c', sans-serif;}
 .voice-box {
-    font-style: italic; background: #fff4f6;
-    padding: 12px; border-radius: 5px;
-    border-left: 5px solid var(--main-color);
-    margin-bottom: 15px; font-family: 'Shippori Mincho', serif; font-weight: bold;
+    font-style: italic; background: #faf5f3;
+    padding: 15px; border-radius: 15px;
+    border-left: 6px solid var(--char-color);
+    margin-bottom: 20px; font-family: 'Shippori Mincho', serif; font-weight: bold;
 }
 .status-table { width: 100%; border-collapse: collapse; margin-bottom: 15px; }
-.status-table th, .status-table td { padding: 8px; border-bottom: 1px dashed #ccc; text-align: left; font-size: 0.9rem; }
-.status-table th { width: 25%; color: var(--main-color); }
-.char-desc { font-size: 0.95rem; line-height: 1.8; }
+.status-table th, .status-table td { padding: 10px; border-bottom: 1px dotted #e0d5ce; font-size: 0.95rem; }
+.status-table th { width: 25%; color: var(--char-color); text-align: left; }
+.char-desc { font-size: 0.95rem; }
 
-/* --- スペック --- */
+/* スペック */
 .spec-table {
-    width: 100%; background: rgba(255,255,255,0.95);
+    width: 100%; background: #fff; border-radius: 20px; overflow: hidden;
     border-collapse: collapse; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
-.spec-table th, .spec-table td { padding: 15px; border: 1px solid var(--dot-color); }
-.spec-table th { background: #fff0f5; color: var(--main-color); width: 30%; text-align: center;}
+.spec-table th, .spec-table td { padding: 18px; border: 1px solid var(--dot-color); }
+.spec-table th { background: #faf5f3; color: var(--main-color); width: 35%; text-align: center; }
 
-/* --- フッター --- */
-footer { text-align: center; padding: 40px 20px; background: #333; color: #fff; font-size: 0.9rem; }
-footer a { color: var(--dot-color); }
+/* フッター */
+footer { text-align: center; padding: 40px 20px; background: #5c4b43; color: #fdfaf6; font-size: 0.9rem; }
 
-/* --- アニメーション設定（JSと連動） --- */
-.fade-in {
-    opacity: 0; transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
+/* アニメーション */
+.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
