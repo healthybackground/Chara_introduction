@@ -43,3 +43,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+// --- スムーススクロール（全ブラウザ確実対応版） ---
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // 通常の「パッと移動する」動きをキャンセル
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            // ヘッダーの高さ（約70px）を引いて、タイトルが隠れないように計算
+            const headerHeight = 70; 
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+            
+            // 滑らかにスクロールさせる
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
